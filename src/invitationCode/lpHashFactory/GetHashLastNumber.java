@@ -53,6 +53,9 @@ public class GetHashLastNumber {
         int number = tempString.hashCode();
         //取哈希的最后一位
         int tempLast = number % 10;
+        if (tempLast < 0) {
+            tempLast = 0 - tempLast;
+        }
         //赋值
         this.setLastNumbeer(tempLast);
     }
@@ -64,7 +67,7 @@ public class GetHashLastNumber {
     }
 
     public static void main(String[] args) {
-        GetHashLastNumber getHashLastNumber = new GetHashLastNumber("123abc");
+        GetHashLastNumber getHashLastNumber = new GetHashLastNumber("X5I9B2");
         System.out.println(getHashLastNumber.getLastNumbeer());
     }
 }
