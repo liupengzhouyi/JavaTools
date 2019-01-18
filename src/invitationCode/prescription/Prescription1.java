@@ -39,7 +39,7 @@ public class Prescription1 implements Prescription {
             this.getLastTime().setHour(1);
             int day = this.getLastTime().getDay();
             if (day > 28) {
-                //yue
+
             } else {
                 this.getLastTime().setDay(day + 1);
             }
