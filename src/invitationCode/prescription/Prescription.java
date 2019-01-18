@@ -2,7 +2,7 @@ package invitationCode.prescription;
 
 public interface Prescription {
 
-    public lpTime getTheLastTime(lpTime time);
+    public lpTime getTheLastTime();
 
     public void setTheLastTime();
 }
