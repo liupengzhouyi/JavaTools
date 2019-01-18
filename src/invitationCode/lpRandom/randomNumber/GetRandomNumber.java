@@ -3,20 +3,20 @@ package invitationCode.lpRandom.randomNumber;
 import invitationCode.lpHashFactory.GetHashLastNumber;
 
 public class GetRandomNumber {
-    private String string = null;
+    private String randomString = null;
 
     private RandomOneNumber randomOneNumber = null;
 
-    public String getString() {
-        return string;
+    public String getRandomString() {
+        return randomString;
     }
 
-    public void setString(String string) {
-        this.string = this.string + string;
+    public void setRandomString(String randomString) {
+        this.randomString = this.randomString + randomString;
     }
 
     public void init() {
-        this.string = new String();
+        this.randomString = new String();
         this.randomOneNumber = new RandomOneNumber();
     }
 
@@ -26,13 +26,13 @@ public class GetRandomNumber {
         for (int i=0;i<3;i++) {
             randomOneNumber = new RandomOneNumber();
             StringNumber = randomOneNumber.getNumber();
-            this.setString(StringNumber);
+            this.setRandomString(StringNumber);
         }
 
     }
 
     public static void main(String[] args) {
         GetRandomNumber getRandomNumber = new GetRandomNumber();
-        System.out.println(getRandomNumber.getString());
+        System.out.println(getRandomNumber.getRandomString());
     }
 }
