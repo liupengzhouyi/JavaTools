@@ -121,8 +121,7 @@ public class Prescription1 implements Prescription {
 
     public static void main(String[] args) {
         lpTime time = new lpTime(2018, 12, 31, 23, 59, 59);
-        Prescription1 prescription1 = new Prescription1(time);
-        System.out.println(prescription1.getBeginTime());
-        System.out.println(prescription1.getTheLastTime());
+        Prescription prescription = new Prescription1(time);
+        System.out.println(prescription.getTheLastTime());
     }
 }
