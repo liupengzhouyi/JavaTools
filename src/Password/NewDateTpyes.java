@@ -14,7 +14,6 @@ public class NewDateTpyes {
         this.arrayList = new ArrayList<>();
     }
 
-
     public ArrayList<NewDateTpye> getArrayList() {
         return arrayList;
     }
