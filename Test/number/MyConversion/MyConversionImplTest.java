@@ -32,6 +32,8 @@ class MyConversionImplTest {
 
     @Test
     void testIntegerToCapitalNumber() {
+        this.getMyConversion().IntegerToCapitalNumber("112358231235");
+        System.out.println(this.getMyConversion().getMoney());
     }
 
     @Test

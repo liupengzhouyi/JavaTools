@@ -84,7 +84,8 @@ public class MyConversionImpl implements MyConversion {
      */
     @Override
     public String IntegerToCapitalNumber(String number) {
-        return null;
+        double doubelNumber = Double.valueOf(number);
+        return this.IntegerToCapitalNumber(doubelNumber);
     }
 
     /**
