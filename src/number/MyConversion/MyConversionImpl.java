@@ -1,6 +1,7 @@
 package number.MyConversion;
 
 import number.Conversion.ConversionImpl;
+import number.MyConversion.OnlyForFourNumberToCapital.CapitalForFourNumber;
 
 public class MyConversionImpl implements MyConversion {
 
@@ -15,7 +16,7 @@ public class MyConversionImpl implements MyConversion {
 
     ConversionImpl conversion = new ConversionImpl();
 
-    String money = "";
+    String money = null;
 
     /**
      * IntegerToCapitalNumber
@@ -36,10 +37,34 @@ public class MyConversionImpl implements MyConversion {
                 k = 0;
             }
         }
-        // 圆万	亿
-        // 壹佰贰拾叁亿 肆仟伍佰陆拾柒万 捌仟玖佰壹拾贰圆
-
-        return null;
+        String[] strings = newString.split("\\.");
+        String string1 = "圆\t万\t亿\t万亿";
+        String[] strings1 = string1.split("\t");
+        // System.out.println(string.length());
+        int no = string.length() / 4;
+        // System.out.println(no);
+        for (int i=0;i<strings.length;i++) {
+            if (strings[i].length() != 4) {
+                for (int j=0;j<(4-strings[i].length()+1);j++) {
+                    strings[i] = "0" + strings[i];
+                }
+            }
+            // System.out.println(strings[i]);
+            CapitalForFourNumber capitalForFourNumber = new CapitalForFourNumber(strings[i]);
+            String tempNumber = capitalForFourNumber.getNumber();
+            // System.out.println(tempNumber);
+            if (no > 3) {
+                this.setMoney("无法计算");
+            } else {
+                if ("".equals(tempNumber)) {
+                    this.setMoney(this.getMoney());
+                } else {
+                    this.setMoney(this.getMoney() + tempNumber + strings1[no]);
+                }
+            }
+            no--;
+        }
+        return this.getMoney();
     }
 
     /**
