@@ -33,7 +33,7 @@ public class DecomnpositionImpl implements Decomposition {
      */
     @Override
     public void decompositionNumber(double number) {
-        double numberI = number / 1;
+        double numberI = (int) (number / 1);
         double numberII = numberI % 1;
         this.setDoubleInteger(numberI);
         this.setDoubleDecimal(numberII);
@@ -45,9 +45,15 @@ public class DecomnpositionImpl implements Decomposition {
      */
     @Override
     public void decompositionString(String number) {
-        String[] strings = number.split(".");
-        this.setStringInteger(strings[0]);
-        this.setStringDecimal(strings[1]);
+        //System.out.println(number);
+        String[] strings = number.split("\\.");
+        try {
+            this.setStringInteger(strings[0]);
+            this.setStringDecimal(strings[1]);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
     }
 
     /**
@@ -56,21 +62,13 @@ public class DecomnpositionImpl implements Decomposition {
      */
     @Override
     public void decompositionChineseString(String number) {
-        char[] chars = number.toCharArray();
-        boolean key = false;
+        String[] strings = number.split("零");
         String numberI = "";
         String numberII = "";
-        for (int i=chars.length;i>=0;i--) {
-            if (chars[i] == '零') {
-                key = true;
-                continue;
-            }
-            if (key) {
-                numberII = chars[i] + numberII;
-            } else {
-                numberI = chars[i] + numberI;
-            }
+        for (int i=0;i<strings.length - 1;i++) {
+            numberI = numberI + "零" + strings[i];
         }
+        numberII = strings[strings.length-1];
         this.setStringInteger(numberI);
         this.setStringDecimal(numberII);
     }
