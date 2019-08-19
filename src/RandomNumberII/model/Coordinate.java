@@ -2,8 +2,10 @@ package RandomNumberII.model;
 
 public class Coordinate {
 
+    // 经度
     private int Longitude ;
 
+    // 纬度
     private int Latitude ;
 
     public Coordinate(int longitude, int latitude) {
