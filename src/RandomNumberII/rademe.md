@@ -19,8 +19,35 @@
 | 9 | * | * | * | * | * | * | * | * | * | * |
 | 10 | * | * | * | * | * | * | * | * | * | * |
 
+## 生成随机坐标
+
+### 坐标的数据结构
+
+   * 经度
+   * 纬度
+
+## 在随机数表中取出随机字符在叠加
 
 
+## 使用方法
+
+
+
+`
+    
+    public class Main {
+        public static void main(String[] args) {
+    
+            CreateRandomNumber createRandomNumber;
+    
+            createRandomNumber = new CreateRandomNumber(2, 8);
+    
+            System.out.println(createRandomNumber.getRandomNumbers());
+    
+        }
+    }
+
+`
 
 
 
