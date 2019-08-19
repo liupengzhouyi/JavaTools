@@ -21,6 +21,7 @@ public class CharMappingTable {
                 this.addItems(i, j, string);
             }
         }
+        CharMappingTable.key = true;
     }
 
     // 添加元素
