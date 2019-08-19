@@ -44,7 +44,7 @@ public class NumberAndCharMappingTable {
     }
 
     // 静态获取映射表格
-    public static String[][] GetNumberMappingTable() {
+    public static String[][] GetNumberAndCharMappingTable() {
         if (!NumberAndCharMappingTable.key) {
             new NumberAndCharMappingTable().createMappingTable();
         }

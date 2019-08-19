@@ -69,6 +69,15 @@ public class MappingTable {
         return this.getMappingTable()[coordinate.getLatitude()][coordinate.getLongitude()];
     }
 
+    public void dispaly() {
+        for (int i=0;i<100;i++) {
+            for (int j=0;j<100;j++) {
+                System.out.print(this.getMappingTable()[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
     public int getLongitude() {
         return Longitude;
     }
