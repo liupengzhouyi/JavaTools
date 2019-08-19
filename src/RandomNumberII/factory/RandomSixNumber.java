@@ -8,6 +8,10 @@ public class RandomSixNumber implements GetRandomNumber {
 
     private Coordinate[] coordinates;
 
+    public RandomSixNumber() {
+        this.createRandomNumber();
+    }
+
     /**
      * 生成一组随机坐标
      * 一组表示：数据行
