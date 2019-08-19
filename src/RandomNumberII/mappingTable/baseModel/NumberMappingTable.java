@@ -1,8 +1,8 @@
-package RandomNumberII.mappingTable;
+package RandomNumberII.mappingTable.baseModel;
 
 import java.util.Random;
 
-public class NumberAndCharMappingTable {
+public class NumberMappingTable {
 
     // 静态射映表格
     private static String[][] stringTable = new String[100][100];
@@ -16,45 +16,39 @@ public class NumberAndCharMappingTable {
         int a = 0;
         for (int i=0;i<100;i++) {
             for (int j=0;j<100;j++) {
-                a = random.nextInt(36);
-                String string = "";
-                if (a<10) {
-                    string = a + "";
-                } else {
-                    string = (char) ((int) ('a' + a - 10)) + "";
-                }
-
+                a = random.nextInt(10);
+                String string = a + "";
                 this.addItems(i, j, string);
             }
         }
-        NumberAndCharMappingTable.key = true;
+        NumberMappingTable.key = true;
     }
 
     // 添加元素
     public void addItems(int i, int j, String item) {
-        NumberAndCharMappingTable.stringTable[i][j] = item;
+        NumberMappingTable.stringTable[i][j] = item;
     }
 
     // 获取静态射映表格
     public String[][] getNumberMappingTable() {
-        if (!NumberAndCharMappingTable.key) {
+        if (!NumberMappingTable.key) {
             this.createMappingTable();
         }
-        return NumberAndCharMappingTable.stringTable;
+        return NumberMappingTable.stringTable;
     }
 
     // 静态获取映射表格
     public static String[][] GetNumberMappingTable() {
-        if (!NumberAndCharMappingTable.key) {
-            new NumberAndCharMappingTable().createMappingTable();
+        if (!NumberMappingTable.key) {
+            new NumberMappingTable().createMappingTable();
         }
-        return NumberAndCharMappingTable.stringTable;
+        return NumberMappingTable.stringTable;
     }
 
     public void dispaly() {
         for (int i=0;i<100;i++) {
             for (int j=0;j<100;j++) {
-                System.out.print(NumberAndCharMappingTable.stringTable[i][j] + "");
+                System.out.print(NumberMappingTable.stringTable[i][j] + "");
             }
             System.out.println("");
         }

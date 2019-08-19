@@ -1,4 +1,4 @@
-package RandomNumberII.mappingTable;
+package RandomNumberII.mappingTable.baseModel;
 
 import java.util.Random;
 
@@ -52,13 +52,6 @@ public class CharMappingTable {
             }
             System.out.println("");
         }
-    }
-
-    public static void main(String[] args) {
-        CharMappingTable charMappingTable = new CharMappingTable();
-        //charMappingTable.getCharMappingTable();
-        CharMappingTable.GetCharMappingTable();
-        charMappingTable.dispaly();
     }
 
 }
