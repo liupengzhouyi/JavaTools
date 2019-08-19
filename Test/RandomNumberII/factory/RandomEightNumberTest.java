@@ -34,6 +34,5 @@ class RandomEightNumberTest {
         for (Coordinate coordinate : this.getRandomEightNumber().createRandomNumber()) {
             System.out.println(coordinate.toString());
         }
-        
     }
 }
