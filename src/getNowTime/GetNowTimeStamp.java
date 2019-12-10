@@ -1,4 +1,4 @@
-package cn.liupengstudy.learningspringbootandmybatis.tools.getNowTime;
+import getNowTime.BaseTime;
 
 import java.util.Calendar;
 import java.util.Date;

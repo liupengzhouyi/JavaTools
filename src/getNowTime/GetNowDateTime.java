@@ -1,4 +1,4 @@
-package cn.liupengstudy.learningspringbootandmybatis.tools.getNowTime;
+import getNowTime.BaseTime;
 
 import java.text.SimpleDateFormat;
 
@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
  * date:2019年8月29日
  * time:11点53分
  */
-public class GetNowDateTime extends BaseTime{
+public class GetNowDateTime extends BaseTime {
 
     /**
      * constructors

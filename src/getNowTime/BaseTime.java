@@ -1,8 +1,9 @@
-package cn.liupengstudy.learningspringbootandmybatis.tools.getNowTime;
+package getNowTime;
 
 import java.util.Date;
 
-public abstract class BaseTime {
+public abstract class
+BaseTime {
 
     private Date date;
 
