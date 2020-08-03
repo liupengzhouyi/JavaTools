@@ -9,4 +9,12 @@ package encrypt.userLanding;
  * @修改人和其它信息
  */
 public class UserLanding {
+
+    public int landing(String userName, String password) {
+        int key = 0;
+
+        return key;
+    }
+
+
 }
