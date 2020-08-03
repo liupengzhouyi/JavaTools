@@ -16,11 +16,9 @@ public class UserRegistration {
     public void Registration(String userName, String password) {
         PasswordEncrypt passwordEncrypt = new PasswordEncrypt();
         password = passwordEncrypt.PasswordEncrypt(userName, password);
-
         FileInput fileInput = new FileInput();
         fileInput.Input("encrypt/userInformation/userName.txt", userName);
         fileInput.Input("encrypt/userInformation/passwordValue.txt", password);
-
     }
 
 }
