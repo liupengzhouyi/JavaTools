@@ -1,6 +1,7 @@
 package encrypt.UserRegistration;
 
 import encrypt.PasswordEncrypt.PasswordEncrypt;
+import encrypt.fileIO.FileInput;
 
 /**
  * @文件名 encrypt
@@ -16,7 +17,9 @@ public class UserRegistration {
         PasswordEncrypt passwordEncrypt = new PasswordEncrypt();
         password = passwordEncrypt.PasswordEncrypt(userName, password);
 
-
+        FileInput fileInput = new FileInput();
+        fileInput.Input("encrypt/userInformation/userName.txt", userName);
+        fileInput.Input("encrypt/userInformation/passwordValue.txt", password);
 
     }
 
