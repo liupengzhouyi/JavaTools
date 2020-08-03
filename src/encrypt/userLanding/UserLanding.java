@@ -8,5 +8,5 @@ package encrypt.userLanding;
  * @创建时间 2020/8/3 - 9:22 下午
  * @修改人和其它信息
  */
-public class UserLaanding {
+public class UserLanding {
 }
