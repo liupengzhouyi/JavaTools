@@ -2,10 +2,7 @@ package encrypt;
 
 import encrypt.fileIO.FileRead;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * @文件名 encrypt
@@ -24,9 +21,9 @@ public class index {
         String IDPassword = "123456";
         FileRead fileRead = new FileRead();
         String s = "000";
-        s = readFile("/Users/liupeng/IdeaProjects/JavaTools/src/encrypt/userName.txt");
+        s = fileRead.readFile("src/encrypt/userName.txt");
         System.out.println(s);
-
+        writeFile();
 
     }
 
@@ -39,5 +36,21 @@ public class index {
             System.out.println(line);
         }
         return line;
+    }
+
+    public static void writeFile() {
+        try {
+            File writeName = new File("src/encrypt/userName.txt"); // 相对路径，如果没有则要建立一个新的output.txt文件
+            writeName.createNewFile(); // 创建新文件,有同名的文件的话直接覆盖
+            try (FileWriter writer = new FileWriter(writeName);
+                 BufferedWriter out = new BufferedWriter(writer)
+            ) {
+                out.write("我会写入文件啦1\r\n"); // \r\n即为换行
+                out.write("我会写入文件啦2\r\n"); // \r\n即为换行
+                out.flush(); // 把缓存区内容压入文件
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
