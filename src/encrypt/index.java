@@ -1,6 +1,7 @@
 package encrypt;
 
-import encrypt.fileIO.FileRead;
+import encrypt.fileIO.FileInput.FileInput;
+import encrypt.fileIO.FileRead.FileRead;
 
 import java.io.*;
 
@@ -24,6 +25,9 @@ public class index {
         s = fileRead.readFile("src/encrypt/userName.txt");
         System.out.println(s);
         writeFile();
+
+        FileInput fileInput = new FileInput();
+        fileInput.Input("src/encrypt/userInformation/passwordValue.txt", password);
 
     }
 

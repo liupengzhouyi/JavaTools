@@ -1,7 +1,7 @@
 package encrypt.UserRegistration;
 
 import encrypt.PasswordEncrypt.PasswordEncrypt;
-import encrypt.fileIO.FileInput;
+import encrypt.fileIO.FileInput.FileInput;
 
 /**
  * @文件名 encrypt

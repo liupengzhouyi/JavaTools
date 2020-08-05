@@ -1,4 +1,4 @@
-package encrypt.fileIO;
+package encrypt.fileIO.FileRead;
 
 import java.io.*;
 
