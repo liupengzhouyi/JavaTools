@@ -11,7 +11,7 @@ package encrypt.PasswordEncrypt;
 public class PasswordEncrypt {
 
     public String PasswordEncrypt(String userName, String password) {
-        return password.hashCode() * password.length() + userName.hashCode() * userName.length() + "";
+        return (password.hashCode() % 1000) * password.length() + (userName.hashCode() % 560) * userName.length() + "";
     }
 
 }

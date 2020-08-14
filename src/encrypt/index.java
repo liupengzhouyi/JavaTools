@@ -3,6 +3,7 @@ package encrypt;
 import encrypt.UserRegistration.UserRegistration;
 import encrypt.fileIO.FileInput.FileInput;
 import encrypt.fileIO.FileRead.FileRead;
+import encrypt.userLanding.UserLanding;
 
 import java.io.*;
 
@@ -23,6 +24,9 @@ public class index {
         String IDPassword = "123456";
         UserRegistration userRegistration = new UserRegistration();
         userRegistration.Registration(name, password);
+
+        UserLanding userLanding = new UserLanding();
+        userLanding.landing(name, password);
 
     }
 }

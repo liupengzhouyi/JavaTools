@@ -19,6 +19,8 @@ public class UserRegistration {
         FileInput fileInput = new FileInput();
         fileInput.Input("src/encrypt/userInformation/userName.txt", userName);
         fileInput.Input("src/encrypt/userInformation/passwordValue.txt", password);
+
+
     }
 
 }
