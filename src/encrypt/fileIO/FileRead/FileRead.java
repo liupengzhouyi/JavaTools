@@ -22,6 +22,13 @@ public class FileRead {
         }
         return informtion;
     }
+
+    public static void main(String[] args) throws IOException {
+        String path = "src/encrypt/userInformation/userName.txt";
+        FileRead fileRead = new FileRead();
+        String information = fileRead.readFile(path);
+        System.out.println(information);
+    }
 }
 
 
