@@ -69,5 +69,10 @@ public class StrongPassword {
         return key == 0;
     }
 
+    public static void main(String[] args) {
+        StrongPassword strongPassword = new StrongPassword();
+        String password = "Lp127";
+        System.out.println(strongPassword.strongPasswordChecker(password));
+    }
 
 }
