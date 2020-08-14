@@ -1,5 +1,7 @@
 package encrypt.fileIO.FileInput;
 
+import encrypt.fileIO.FileRead.FileRead;
+
 import java.io.*;
 
 /**
@@ -27,5 +29,11 @@ public class FileInput {
         }
     }
 
+    public static void main(String[] args) {
+        String path = "src/encrypt/userInformation/userName.txt";
+        FileInput fileInput = new FileInput();
+        String information = "nfdksiukehbnac aolinkfd nk";
+        fileInput.Input(path, information);
+    }
 
 }
