@@ -1,5 +1,6 @@
 package encrypt;
 
+import encrypt.UserRegistration.UserRegistration;
 import encrypt.fileIO.FileInput.FileInput;
 import encrypt.fileIO.FileRead.FileRead;
 
@@ -20,13 +21,8 @@ public class index {
         String password = "123456";
         String userID = "liupeng.0@outlook.com";
         String IDPassword = "123456";
-        FileRead fileRead = new FileRead();
-        String s = "000";
-        s = fileRead.readFile("src/encrypt/userInformation/userName.txt");
-        System.out.println(s);
-
-        FileInput fileInput = new FileInput();
-        fileInput.Input("src/encrypt/userInformation/passwordValue.txt", password);
+        UserRegistration userRegistration = new UserRegistration();
+        userRegistration.Registration(name, password);
 
     }
 }
