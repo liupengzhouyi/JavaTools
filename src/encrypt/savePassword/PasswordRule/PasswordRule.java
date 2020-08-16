@@ -5,5 +5,13 @@ package encrypt.savePassword.PasswordRule;/**
  * @作者联系方式 LIUPENG.0@outlook.com
  * @创建时间  2020/8/14 - 11:54 下午
  * @修改人和其它信息
- */public class PasswordRule {
+ */
+
+public class PasswordRule {
+
+
+
+
+
+
 }
