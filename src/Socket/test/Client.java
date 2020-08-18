@@ -1,4 +1,4 @@
-package Socket;
+package Socket.test;
 
 /**
  * @文件名 Socket
@@ -17,6 +17,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args) {
@@ -28,6 +29,7 @@ public class Client {
             OutputStream os = s.getOutputStream();
 
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(os));
+
             //向服务器端发送一条消息
             bw.write("测试客户端和服务器通信，服务器接收到消息返回到客户端\n");
             bw.flush();
@@ -36,10 +38,20 @@ public class Client {
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
             String mess = br.readLine();
             System.out.println("服务器："+mess);
+
+            Scanner sc = new Scanner(System.in);
+            System.out.println("-------请输入你的回复信息：-------");
+            String name = sc.nextLine();
+            bw.write(name);
+            bw.flush();
+
         } catch (UnknownHostException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
+
 }
