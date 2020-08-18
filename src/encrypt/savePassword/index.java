@@ -4,6 +4,7 @@ import encrypt.fileIO.FileInput.FileInput;
 import encrypt.fileIO.createFile.CreateFile;
 import encrypt.fileIO.createFolder.CreateFolder;
 import encrypt.fileIO.getAllFolder.GetAllFolder;
+import encrypt.savePassword.Password.Password;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,7 +22,7 @@ public class index {
 
     public static void main(String[] args) throws IOException {
 
-        String passwordName = "LinkedIn";
+        String passwordName = "LinkedIn1";
         String passwordInformation = "刘鹏的 LinkedIn 账户与密码";
         String userID = "liupeng.0@outlook.com";
         String IDPassword = "123456";
@@ -77,6 +78,23 @@ public class index {
             String passwordIDInformationPath = passwordIdFilePath + "/" + passwordIdFileName;
             fileInput.Input(passwordIDInformationPath, userID);
             System.out.println("写入账户信息完成✅");
+
+            // 创建密码文件
+            System.out.println("正在创建密码文件...");
+            String passwordFilePath = path + "/" + passwordName;
+            String passwordFileName = passwordName + "Password.txt";
+            createFile.createFile(passwordFilePath, passwordFileName);
+            System.out.println("创建密码文件完成✅...");
+
+
+            Password p = new Password();
+            String temp = p.createPassword(IDPassword);
+
+            // 写入密码文件
+            System.out.println("正在写入密码文件...");
+            String passwordPath = passwordIdFilePath + "/" + passwordFileName;
+            fileInput.Input(passwordPath, temp);
+            System.out.println("写入密码文件完成✅");
 
 
         }

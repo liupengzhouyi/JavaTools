@@ -50,5 +50,13 @@
 `
 
 
+## 参数
 
+* type : 类型
+    * 1 : char
+    * 2 : number and char
+    * 3 : number
+     
+* number ：数据长度
+ int
  
